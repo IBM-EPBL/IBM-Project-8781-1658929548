@@ -10,7 +10,7 @@ message = Mail(
     subject='veryfying the account',
     html_content= r'template.html')
 try:
-    sg = SendGridAPIClient(os.environ.get('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'))
+    sg = SendGridAPIClient(os.environ.get('my api key'))
     response = sg.send(message)
     print(response.status_code)
     print(response.body)
